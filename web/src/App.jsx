@@ -1,21 +1,24 @@
-import "./App.css";
-
-import logo from "./assets/react.svg";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle, theme } from './styles/GlobalStyle';
+import Dashboard from './pages/Dashboard';
+import Admin from './pages/Admin';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <div
-      style={{
-        marginTop: "auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <h1 style={{ marginTop: "auto" }}>Let's Start !</h1>
-      <img src={logo} alt="react_logo" style={{ marginBottom: "auto" }} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

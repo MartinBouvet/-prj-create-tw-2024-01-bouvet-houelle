@@ -1,18 +1,26 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "backend of tp",
+  "description": "Backend API for P.E.IoT Dashboard",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "keywords": [],
+  "keywords": [
+    "dashboard",
+    "iot",
+    "sensors"
+  ],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^7.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

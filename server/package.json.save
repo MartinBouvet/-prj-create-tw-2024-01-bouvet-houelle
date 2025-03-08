@@ -1,0 +1,20 @@
+
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "backend of tp",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.14.2"
+  }
+}
